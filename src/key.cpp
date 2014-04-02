@@ -130,7 +130,7 @@ private:
 
 public:
     CECKey() {
-        pkey = EC_KEY_new_by_curve_name(NID_secp256k1);
+        pkey = EC_KEY_new_by_curve_name(NID_X9_62_prime256v1);
         assert(pkey != NULL);
     }
 
@@ -288,7 +288,7 @@ public:
         BIGNUM *bnSecret = BN_CTX_get(ctx);
         BIGNUM *bnTweak = BN_CTX_get(ctx);
         BIGNUM *bnOrder = BN_CTX_get(ctx);
-        EC_GROUP *group = EC_GROUP_new_by_curve_name(NID_secp256k1);
+        EC_GROUP *group = EC_GROUP_new_by_curve_name(NID_X9_62_prime256v1);
         EC_GROUP_get_order(group, bnOrder, ctx); // what a grossly inefficient way to get the (constant) group order...
         BN_bin2bn(vchTweak, 32, bnTweak);
         if (BN_cmp(bnTweak, bnOrder) >= 0)
