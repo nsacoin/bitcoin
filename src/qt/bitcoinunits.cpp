@@ -49,9 +49,9 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case NSA: return QString("Bitcoins");
-    case mNSA: return QString("Milli-Bitcoins (1 / 1,000)");
-    case uNSA: return QString("Micro-Bitcoins (1 / 1,000,000)");
+    case NSA: return QString("NSAcoins");
+    case mNSA: return QString("Milli-NSAcoins (1 / 1,000)");
+    case uNSA: return QString("Micro-NSAcoins (1 / 1,000,000)");
     default: return QString("???");
     }
 }
