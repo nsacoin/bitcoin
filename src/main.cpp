@@ -1203,7 +1203,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
 
     // Gravity well 
 
-    static const int64_t  BlocksTargetSpacing     = 5 * 60; // 5 minutes 
+    static const int64_t  BlocksTargetSpacing     = 10 * 60; // 10 minutes 
     unsigned int    TimeDaySeconds        = 60 * 60 * 24;
     int64_t       PastSecondsMin        = TimeDaySeconds * 0.5;
     int64_t       PastSecondsMax        = TimeDaySeconds * 14;
